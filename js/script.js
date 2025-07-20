@@ -7,21 +7,23 @@ function loadEmails() {
   // Svuoto la lista prima di inserire nuove voci
   emailList.innerHTML = "";
 
-  // Eseguo 10 chiamate axios in un ciclo
+ // Eseguo 10 chiamate axios in un ciclo
   for (let i = 0; i < 10; i++) {
     axios
       .get("https://flynn.boolean.careers/exercises/api/random/mail")
       .then((resp) => {
-        // Estraggo l'email dalla risposta
+        // Estraggo l'e-mail
         const email = resp.data.response;
-        // Creo un nuovo <li> con la classe di Bootstrap e l'email
-        const listItem = `<li class="list-group-item">${email}</li>`;
-        // Lo appendo alla lista
-        emailList.innerHTML += listItem;
+        // Controllo quanti <li> ci sono già; se sono meno di 10, appendo
+        if (emailList.children.length < 10) {
+          const listItem = `<li class="list-group-item">${email}</li>`;
+          emailList.innerHTML += listItem;
+        }
       });
   }
 }
-// Al click del bottone, richiamo loadEmails() per rigenerare le email
+
+// Con click del bottone, richiamo loadEmails() per ri-generare le e-mail
 refreshBtn.addEventListener("click", loadEmails);
 
 // Carico automaticamente le prime 10 email all'avvio della pagina

@@ -74,7 +74,8 @@ h1 {
   transition: color 0.3s ease;
 }
 .email-list .list-group-item:hover {
-  background-color: #989cb0;
-  color: white; 
-  transform: scale(1.02);
+  background: radial-gradient(circle at center,#989cb0 , #2B2844);
+  color: white;
+  transition: background 0.5s;
+  transform: scale(1.10)
 }

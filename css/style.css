@@ -34,7 +34,7 @@ h1 {
   font-family: "Bitcount Prop Single", system-ui;
   font-size: 40px;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #ffffff;
 }
 
@@ -64,6 +64,7 @@ h1 {
   list-style: none;
   font-family: "Cormorant", serif;
   font-weight: 500;
+  font-size: 18px;
 }
 .email-list .list-group-item {
   background-color: #DEE4EB;
@@ -72,7 +73,7 @@ h1 {
   transition: color 0.3s ease;
 }
 .email-list .list-group-item:hover {
-  background-color: #6f85b7;
-  color: #ffffff; 
+  background-color: #989cb0;
+  color: white; 
   transform: scale(1.02);
 }

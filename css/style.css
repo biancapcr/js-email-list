@@ -6,7 +6,7 @@
 }
 /* Body */
 body {
-  font-family: 'Cormorant', serif;
+  font-family: "Montserrat", sans-serif;
   background-color: white;
   color: black;
   min-height: 100vh;
@@ -18,16 +18,6 @@ body {
   justify-content: center;
   align-items: flex-start;
   padding: 32px;
-}
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: -1;
 }
 
 /* Container */
@@ -41,8 +31,7 @@ body::before {
 
 /* Titolo */
 h1 {
-  font-family: 'Cormorant', serif;
-  font-weight: 700;
+  font-family: "Bitcount Prop Single", system-ui;
   font-size: 40px;
   text-align: center;
   margin-bottom: 40px;
@@ -53,10 +42,10 @@ h1 {
 .btn-refresh {
   display: block;
   width: 100%;
-  margin-bottom: 16px;
-  font-family: 'Cormorant', serif;
-  font-weight: 700;
-  font-size: 16px;
+  font-family: "Cormorant", serif;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 18px;
   color: #ffffff;
   background-color: #2B2844;
   border: none;
@@ -68,4 +57,22 @@ h1 {
 .btn-refresh:hover {
   box-shadow: 0 0 5px c, 0 0 25px #DEE4EB, 0 0 50px #DEE4EB, 0 0 100px #DEE4EB, 0 0 200px #DEE4EB;
   background-color: #02014C;
+}
+
+/* Lista */
+.email-list {
+  list-style: none;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+}
+.email-list .list-group-item {
+  background-color: #DEE4EB;
+  color: #2B2844;
+  border: none;
+  transition: color 0.3s ease;
+}
+.email-list .list-group-item:hover {
+  background-color: #6f85b7;
+  color: #ffffff; 
+  transform: scale(1.02);
 }

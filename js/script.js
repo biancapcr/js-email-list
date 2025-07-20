@@ -21,3 +21,8 @@ function loadEmails() {
       });
   }
 }
+// Al click del bottone, richiamo loadEmails() per rigenerare le email
+refreshBtn.addEventListener("click", loadEmails);
+
+// Carico automaticamente le prime 10 email all'avvio della pagina
+loadEmails();
